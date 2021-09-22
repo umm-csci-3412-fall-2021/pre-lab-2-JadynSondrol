@@ -67,6 +67,12 @@ int is_clean(char* str) {
   // greater than the second.
   result = strcmp(str, cleaned);
 
+  // check if cleaned is empty
+  // if not, then free the memory allocated to it
+  if(strcmp(cleaned, "") != 0){
+	  free(cleaned);
+  }
+
   return result == 0;
 }
 
